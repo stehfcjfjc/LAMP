@@ -20,3 +20,17 @@ SELECT titolo, quantita_disponibile FROM libri WHERE titolo = '1984';
 SELECT titolo, quantita_disponibile FROM libri WHERE titolo = '1984';
 -- Visualizza i dati prima dell'inserimento per verifica
 SELECT * FROM libri;
+
+-- Esegui la query per raggruppare per genere e trovare il libro con la minima disponibilità
+SELECT genere, 
+       MIN(quantita_disponibile) AS minima_disponibilita
+FROM libri
+GROUP BY genere;
+
+-- Esegui la query per raggruppare per genere e trovare il libro con più disponibilità
+SELECT genere, 
+       MAX(quantita_disponibile) AS massima_disponibilita
+FROM libri
+GROUP BY genere;
+
+

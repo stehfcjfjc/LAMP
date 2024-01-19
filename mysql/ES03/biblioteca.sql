@@ -22,8 +22,6 @@ INSERT INTO libri VALUES
 INSERT INTO libri (id_libro, titolo, autore, anno_pubblicazione, genere, quantita_disponibile)
 VALUES
   (6, 'Il Codice da Vinci', 'Dan Brown', 2003, 'Thriller', 15),
-  (7, 'Orgoglio e Pregiudizio', 'Jane Austen', 1813, 'Romanzo', 8);
-
 -- Visualizza i dati dopo l'eliminazione per conferma
 SELECT * FROM libri;
 
