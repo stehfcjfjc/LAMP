@@ -26,6 +26,15 @@ WHERE genere = 'Fantasy';
 -- Visualizza i dati prima dell'eliminazione per verifica
 SELECT * FROM libri;
 
+-- Esegui l'inserimento dei nuovi libri
+INSERT INTO libri (id_libro, titolo, autore, anno_pubblicazione, genere, quantita_disponibile)
+VALUES
+  (6, 'Il Codice da Vinci', 'Dan Brown', 2003, 'Thriller', 15),
+  (7, 'Orgoglio e Pregiudizio', 'Jane Austen', 1813, 'Romanzo', 8);
+
+-- Visualizza i dati dopo l'inserimento per conferma
+SELECT * FROM libri;
+
 -- Esegui la query per eliminare i libri pubblicati prima del 1900
 DELETE FROM libri
 WHERE anno_pubblicazione < 1900;
@@ -43,12 +52,5 @@ SELECT titolo, quantita_disponibile FROM libri WHERE titolo = '1984';
 -- Visualizza i dati prima dell'inserimento per verifica
 SELECT * FROM libri;
 
--- Esegui l'inserimento dei nuovi libri
-INSERT INTO libri (titolo, autore, anno_pubblicazione, genere, quantita_disponibile)
-VALUES
-  ('Il Codice da Vinci', 'Dan Brown', 2003, 'Thriller', 15),
-  ('Orgoglio e Pregiudizio', 'Jane Austen', 1813, 'Romanzo', 8);
 
--- Visualizza i dati dopo l'inserimento per conferma
-SELECT * FROM libri;
-
+INSERT INTO libri VALUES (2, 'Cime tempestose', 'Emily Brontë', 1847, 'Romanzo', 5), (4, 'Piccole donne', 'Louisa May Alcott', 1868, 'Romanzo', 12);
